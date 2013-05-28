@@ -24,7 +24,7 @@ class init {
 class python {
 
   # Installs Python, mopd python and restart Apache
-  package { ['python', 'python-pip', 'libapache2-mod-python']:
+  package { ['python', 'python-pip', 'libapache2-mod-wsgi','libapache2-mod-python']:
     ensure  => installed,
     notify  => Service['apache2'],
   }
